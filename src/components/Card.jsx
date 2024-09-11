@@ -3,7 +3,7 @@ import "../App.css";
 
 function Card({ card, aggiungi, rimuovi }) {
   return (
-    <div className="col">
+    <div className="col-md-4 d-flex justify-content-center">
       <div
         className="card"
         style={{ width: "18rem", textAlign: "center", marginBottom: "20px" }}

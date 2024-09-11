@@ -15,7 +15,7 @@ function Cart() {
           <div className="col-lg-8">
             <div className="total">
               <div className="card bg-dark text-white border-white mb-4">
-                <h1 style={{ fontSize: "430%" }}>Il tuo carrello:</h1></div></div>
+                <h1 style={{ fontSize: "430%", fontWeight:"bold" }}>Il tuo carrello:</h1></div></div>
             {articoliNelCarrello.length === 0 ? (
               <div className="card bg-dark mb-3 text-white border-white">
                 <div className="text-center">
