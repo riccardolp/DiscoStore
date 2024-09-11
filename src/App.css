@@ -1,0 +1,72 @@
+.total {
+  font-size: small;
+  font-family: Raleway;
+  color: white;
+  text-shadow: 1px 3px black;
+  text-align: center;
+}
+.background {
+  background-image: url('./images/background-img.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.nav-link-custom {
+  border: 2px solid white !important;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+  color: white !important;
+  background-color: transparent;
+}
+.nav-link-custom:hover{
+  background-color: white;
+  color: black !important;
+}
+.audio-player {
+  width: 100%;
+  margin-bottom: 5%;
+  border-radius: 5%;
+}
+.no-results {
+  font-size: 1.5em;
+  font-family: Raleway;
+  color: white;
+  text-shadow: 1px 2px black;
+  text-align: center;
+  margin-top: 55px;
+}
+.card-title-about {
+  font-family: Raleway;
+  text-shadow: 1px 2px black;
+  font-weight: bold;
+}
+.card-text-about {
+  font-family: Raleway;
+  font-size: large;
+}
+.card-title-cart {
+  font-family: Raleway;
+  text-shadow: 1px 2px black;
+  font-weight: bold;
+}
+.card-text-cart {
+  font-size: x-large;
+  text-align: start;
+  font-family: Raleway;
+}
+.img-responsive {
+  width: 380px;
+  height: 380px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .img-responsive {
+    width: 70%;
+    height: auto;
+    
+  }
+}
