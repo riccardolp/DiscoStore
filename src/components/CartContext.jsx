@@ -99,13 +99,19 @@ export const CartProvider = ({ children }) => {
   };
 
   const totale = () => {
-    return cards
-      .reduce((acc, card) => acc + card.prezzo * card.quantità, 0)
-      .toFixed(2);
+    let total = 0;
+    for (let i = 0; i < cards.length; i++) {
+      total += cards[i].prezzo * cards[i].quantità;
+    }
+    return total.toFixed(2);
   };
 
   const quantitàTotale = () => {
-    return cards.reduce((acc, card) => acc + card.quantità, 0);
+    let totalQuantity = 0;
+    for (let i = 0; i < cards.length; i++) {
+      totalQuantity += cards[i].quantità;
+    }
+    return totalQuantity;
   };
 
   const filteredCards = cards.filter((card) =>

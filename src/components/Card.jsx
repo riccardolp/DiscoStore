@@ -4,52 +4,32 @@ import "../App.css";
 function Card({ card, aggiungi, rimuovi }) {
   return (
     <div className="col-md-4 d-flex justify-content-center">
-      <div
-        className="card"
-        style={{ width: "18rem", textAlign: "center", marginBottom: "20px" }}
-      >
-        <button
-          type="button"
-          onClick={() => {
-            aggiungi(card);
-          }}
-          className="btn bg-dark"
-          style={{color: "white"}}
-        >
-          Aggiungi
-          <span
-            className="badge badge-danger ms-2"
-            style={{ backgroundColor: "white", color: "black" }}
-          >
-            {card.quantità}
-          </span>
-        </button>
-        <img
-          src={card.immagine}
-          className="card-img-top"
-          alt="fotovinile"
-          style={{ height: "18rem" }}
-        />
+      <div className="card" style={{ width: "18rem", textAlign: "center", marginBottom: "20px", border: "2px solid white" }}>
+        <img src={card.immagine} className="card-img-top" alt="fotovinile" style={{ height: "18rem", border: "2px solid dark" }} />
         <div className="card-body">
-          <h5 className="card-title" style={{ fontSize :" 22px" }}>{card.nome}</h5>
+          <h5 className="card-title" style={{ fontSize: "22px" }}>{card.nome}</h5>
           <p className="card-text">{card.titolo}</p>
           <p className="card-text">{card.prezzo}€</p>
           <audio controls className="audio-player">
             <source src={card.audio} type="audio/mpeg" />
           </audio>
-          <button
-            onClick={() => {
-              rimuovi(card.id);
-            }}
-            className="btn btn-outline-danger"
-          >
-            Rimuovi
-          </button>
+          <div className="d-flex justify-content-between mt-3">
+            <button type="button" onClick={() => { aggiungi(card) }} className="btn bg-dark" style={{ color: "white" }}>
+              Aggiungi
+              <span className="badge badge-danger ms-2" style={{ backgroundColor: "white", color: "black" }}>
+                {card.quantità}
+              </span>
+            </button>
+            <button onClick={() => { rimuovi(card.id) }} className="btn btn-outline-danger" style={{ width:'50%'}}>
+              Rimuovi
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
-};
+}
+
 
 Card.propTypes = {
   card: PropTypes.shape({

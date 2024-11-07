@@ -41,7 +41,7 @@ function About() {
             </div>
             <div className="card mb-4 bg-dark text-white border-white">
               <div className="card-body">
-                <h2 className="card-title-about">Cosa Offriamo</h2>
+                <h2 className="card-title-about">I Nostri Servizi</h2>
                 <ul className="card-text-about">
                   <li>
                     <strong>Ampia Selezione</strong>: Dalle edizioni limitate ai
